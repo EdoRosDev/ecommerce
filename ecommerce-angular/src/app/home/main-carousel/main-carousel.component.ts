@@ -38,7 +38,7 @@ export class MainCarouselComponent implements OnInit {
   }
   
   onItemChange($event: any): void {
-    console.log('Carousel onItemChange', $event);
+
   }
 
   autoPlay(){

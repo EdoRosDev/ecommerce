@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HomeProductCardComponent } from '../home-product-card/home-product-card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-product-slider',
+  selector: 'product-slider',
   standalone: true,
-  imports: [],
+  imports: [HomeProductCardComponent, CommonModule],
   templateUrl: './product-slider.component.html',
   styleUrl: './product-slider.component.scss'
 })
 export class ProductSliderComponent {
+  @Input() title!: string;
+  @Input() products!: any;
 
 }
