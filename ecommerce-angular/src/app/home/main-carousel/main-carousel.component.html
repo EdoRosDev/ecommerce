@@ -1,0 +1,19 @@
+<div class="relative">
+    <div class="carousel-container overflow-x-hidden">
+        
+
+        <c-carousel (itemChange)="onItemChange($event)" [interval]="2000" transition="slide">
+            <c-carousel-inner>
+              <c-carousel-item *ngFor="let slide of slides">
+                <a [routerLink]="slide.path" class="carousel-item"> 
+                    <img [src]="slide.src" alt="carousel image" class="d-block w-100" loading="lazy"> 
+                </a>
+              </c-carousel-item>
+            </c-carousel-inner>
+          </c-carousel>
+
+    </div>
+
+
+
+</div>
