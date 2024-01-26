@@ -25,5 +25,21 @@ export const menJeans = [
         "discountedPrice": "",
         "size": ["M", "L"]
 
+    },
+    {
+        "imageUrl": "https://www.espritshop.it/dw/image/v2/BDSS_PRD/on/demandware.static/-/Sites-esprit-master/default/dwe8e68908/images/10/013/013EE2B312_902_10.jpg?sfrm=jpg&sw=420&sh=630&sm=fit",
+        "brand": "brandName",
+        "title": "jeans4",
+        "color": "lightblue",
+        "discountedPrice": "",
+        "size": ["M", "L"]
+    },
+    {
+        "imageUrl": "https://www.boggi.com/dw/image/v2/BBBS_PRD/on/demandware.static/-/Sites-BoggiCatalog/default/dwb2894a71/images/hi-res/BO22C011601.jpeg?sw=720&sh=1080",
+        "brand": "Denim",
+        "title": "jeans5",
+        "color": "blue",
+        "discountedPrice": "",
+        "size": ["S", "M"]
     }
 ]
