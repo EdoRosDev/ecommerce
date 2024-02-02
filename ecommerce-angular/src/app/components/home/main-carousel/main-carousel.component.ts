@@ -1,5 +1,5 @@
 import { AfterContentInit, Component } from '@angular/core';
-import { homeCarouselData } from '../../../data/mainCarousel';
+import { homeCarouselData } from '../../../../data';
 import { RouterLink } from '@angular/router';
 import { CommonModule, NgFor } from '@angular/common';
 import { OnInit } from '@angular/core';
