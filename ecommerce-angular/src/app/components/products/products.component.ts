@@ -4,12 +4,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider'
 import { MatIconModule } from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox'
 import { filters } from '../../../data';
 
 @Component({
   selector: 'products',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatMenuModule, MatDividerModule, MatIconModule],
+  imports: [CommonModule, MatButtonModule, MatMenuModule, MatDividerModule, MatIconModule, MatCheckboxModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
@@ -22,5 +23,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit(){
     this.filterData = filters
   }
+
+  setFilter(){}
 
   }
