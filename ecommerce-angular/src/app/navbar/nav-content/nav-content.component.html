@@ -1,1 +1,23 @@
-<p>nav-content works!</p>
+<div class="w-full">
+
+    <div class="bg-gray-950 text-white w-full h-1/4 shadow-lg p-6">
+        <div class="flex justify-around">
+
+            <div class="flex flex-col" *ngFor="let section of category[selectedSection].sections">
+                <h1 class="text center">{{section.name}}</h1>
+                <button mat-button *ngFor="let item of section.items">
+                    {{item.name}}
+                </button>
+            </div>
+
+            <div class="hidden lg:block">
+                <div class="mb-5">
+                    <img class="w-[19rem] h-[20rem] object-cover rounded-md" src="https://saint-laurent.dam.kering.com/m/783945d026ccc9c8/Medium2-687687YCL369248_A.jpg?v=1" alt="">
+                </div>
+                <p class="text-gray-600">New Arrival</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>

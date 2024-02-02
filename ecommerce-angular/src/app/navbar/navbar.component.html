@@ -1,13 +1,13 @@
-<div class="fixed top-0 z-50 right-0 left-0 bg-[#69f0ea] text-gray-800 px-5 lg:px-20">
+<div class=" fixed top-0 z-50 right-0 left-0 bg-[#69f0ea] text-gray-800">
 
-    <div class="h-16 flex items-center justify-between">
+    <div class="px-5 lg:px-20 h-16 flex items-center justify-between">
 
         <div class="flex items-center">
             <div class="flex space-x-4">
                 <a routerLink="/" class="text-gray-800">Shop with Edo</a>
                 <div>
-                    <button class="" (click)="openNavbarContent('men')" mat-button>Men</button>
-                    <button class="" (click)="openNavbarContent('women')" mat-button>Women</button>
+                    <button class="open-button" (click)="openNavbarContent('men')" mat-button>Men</button>
+                    <button class="open-button" (click)="openNavbarContent('women')" mat-button>Women</button>
                 </div>
             </div>
         </div>
@@ -35,6 +35,12 @@
 
             </div>
         </div>
+
+    </div>
+
+    <div class="modal-container" *ngIf="isNavbarContentOpen">
+
+        <nav-content [selectedSection]="currentSection"></nav-content>
 
     </div>
 </div>
