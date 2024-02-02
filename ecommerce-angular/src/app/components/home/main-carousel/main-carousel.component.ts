@@ -3,14 +3,12 @@ import { homeCarouselData } from '../../../data/mainCarousel';
 import { RouterLink } from '@angular/router';
 import { CommonModule, NgFor } from '@angular/common';
 import { OnInit } from '@angular/core';
-import { CarouselModule } from '@coreui/angular';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // BrowserAnimationsModule or provideAnimations
 
 @Component({
   selector: 'main-carousel',
   standalone: true,
-  imports: [RouterLink, CommonModule, CarouselModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './main-carousel.component.html',
   styleUrl: './main-carousel.component.scss'
 })
@@ -19,22 +17,22 @@ export class MainCarouselComponent implements OnInit {
   carouselData: {image: string, path:string}[];
   currentSlide: number;
   interval: number = 1000
-
+  slider: any;
   slides: {id: number, src: string, path: string}[] = []
-
+  
   constructor(){
     this.carouselData = homeCarouselData
     this.currentSlide = 0;
     for (let i = 0; i < homeCarouselData.length; i++) {
       this.slides.push({id: i, src: homeCarouselData[i].image, path: homeCarouselData[i].path})
     }
+    this.carouselData = homeCarouselData
+    this.currentSlide = 0;
+    this.autoPlay();
   }
 
   ngOnInit(){
 
-    this.carouselData = homeCarouselData
-    this.currentSlide = 0;
-    this.autoPlay();
   }
   
   onItemChange($event: any): void {
