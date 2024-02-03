@@ -4,7 +4,7 @@ export const womenHat = [
         "brand": "Big",
         "title": "WomenHat1",
         "color": "green",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M"]
     },
     {
@@ -12,7 +12,7 @@ export const womenHat = [
         "brand": "Cloche",
         "title": "WomenHat2",
         "color": "green",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M", "L"]
     },
     {
@@ -20,7 +20,7 @@ export const womenHat = [
         "brand": "Cowboy",
         "title": "WomenHat3",
         "color": "brown",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S", "L"]
     },
     {
@@ -28,7 +28,7 @@ export const womenHat = [
         "brand": "Soaker",
         "title": "WomenHat4",
         "color": "white",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S","M"]
     },
     {
@@ -36,7 +36,7 @@ export const womenHat = [
         "brand": "Summer",
         "title": "WomenHat5",
         "color": "black",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S","M"]
     },
 ]

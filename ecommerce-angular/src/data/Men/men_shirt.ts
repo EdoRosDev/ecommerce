@@ -4,7 +4,7 @@ export const menShirt = [
         "brand": "Henley",
         "title": "shirt1",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M"]
     },
     {
@@ -12,7 +12,7 @@ export const menShirt = [
         "brand": "Poggianti",
         "title": "shirt2",
         "color": "grey",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M"]
     },
     {
@@ -20,7 +20,7 @@ export const menShirt = [
         "brand": "Kuchaman",
         "title": "shirt3",
         "color": "black",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S", "L"]
     },
     {
@@ -28,7 +28,7 @@ export const menShirt = [
         "brand": "Maroon",
         "title": "shirt4",
         "color": "red",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S"]
     },
     {
@@ -36,7 +36,7 @@ export const menShirt = [
         "brand": "Kuchaman",
         "title": "shirt5",
         "color": "white",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S","M", "L"]
     },
 ]

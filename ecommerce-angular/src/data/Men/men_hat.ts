@@ -4,7 +4,7 @@ export const menHat = [
         "brand": "Fedora",
         "title": "hat1",
         "color": "red",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M"]
     },
     {
@@ -12,7 +12,7 @@ export const menHat = [
         "brand": "Fedora",
         "title": "hat2",
         "color": "brown",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M", "L"]
     },
     {
@@ -20,7 +20,7 @@ export const menHat = [
         "brand": "Cilinder",
         "title": "hat3",
         "color": "brown",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S", "L"]
     },
     {
@@ -28,7 +28,7 @@ export const menHat = [
         "brand": "Fedora",
         "title": "hat4",
         "color": "grey",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S","M"]
     },
     {
@@ -36,7 +36,7 @@ export const menHat = [
         "brand": "Winter",
         "title": "hat5",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S","M"]
     },
 ]

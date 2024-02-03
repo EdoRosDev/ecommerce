@@ -4,7 +4,7 @@ export const menJeans = [
         "brand": "brandName",
         "title": "jeans1",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M", "L"]
 
     },
@@ -13,7 +13,7 @@ export const menJeans = [
         "brand": "brandName",
         "title": "jeans2",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M", "L"]
 
     }, 
@@ -22,7 +22,7 @@ export const menJeans = [
         "brand": "brandName",
         "title": "jeans3",
         "color": "black",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M", "L"]
 
     },
@@ -31,7 +31,7 @@ export const menJeans = [
         "brand": "brandName",
         "title": "jeans4",
         "color": "lightblue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M", "L"]
     },
     {
@@ -39,7 +39,7 @@ export const menJeans = [
         "brand": "Denim",
         "title": "jeans5",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S", "M"]
     }
 ]

@@ -4,7 +4,7 @@ export const womenJeans = [
         "brand": "UK",
         "title": "womenjeans1",
         "color": "grey",
-        "discountedPrice": "",
+        "price": "",
         "size": ["L"]
 
     },
@@ -13,7 +13,7 @@ export const womenJeans = [
         "brand": "Levi",
         "title": "womenjeans2",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S", "M"]
 
     }, 
@@ -22,7 +22,7 @@ export const womenJeans = [
         "brand": "Gucci",
         "title": "womenjeans3",
         "color": "lightblue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M", "L"]
 
     },
@@ -31,7 +31,7 @@ export const womenJeans = [
         "brand": "Gucci",
         "title": "womenjeans4",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M", "L"]
     },
     {
@@ -39,7 +39,7 @@ export const womenJeans = [
         "brand": "Levi",
         "title": "womenjeans5",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S", "M"]
     }
 ]

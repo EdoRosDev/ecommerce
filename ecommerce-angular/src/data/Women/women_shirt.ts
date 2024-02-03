@@ -4,7 +4,7 @@ export const womenShirt = [
         "brand": "Beatrice",
         "title": "womenshirt1",
         "color": "lightblue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M"]
     },
     {
@@ -12,7 +12,7 @@ export const womenShirt = [
         "brand": "Russel",
         "title": "womenshirt2",
         "color": "white",
-        "discountedPrice": "",
+        "price": "",
         "size": ["M"]
     },
     {
@@ -20,7 +20,7 @@ export const womenShirt = [
         "brand": "Pinklady",
         "title": "womenshirt3",
         "color": "pink",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S", "L"]
     },
     {
@@ -28,7 +28,7 @@ export const womenShirt = [
         "brand": "Maroon",
         "title": "womenshirt4",
         "color": "multi",
-        "discountedPrice": "",
+        "price": "",
         "size": ["L"]
     },
     {
@@ -36,7 +36,7 @@ export const womenShirt = [
         "brand": "Kuchawoman",
         "title": "womenshirt5",
         "color": "blue",
-        "discountedPrice": "",
+        "price": "",
         "size": ["S","M", "L"]
     },
 ]
