@@ -19,6 +19,11 @@ export class ProductsComponent implements OnInit {
   filterData: any
   sortMenu:any = ''
   menShirt: any;
+  showFilter: boolean = false
+  activatedFilter: {
+    sectionId: string
+    value: string
+  }[] = []
 
 
   ngOnInit(){
@@ -26,7 +31,15 @@ export class ProductsComponent implements OnInit {
     this.menShirt = menShirt
   }
 
-  setFilter(){}
+  showFilters(){
+    let filters_form = document.getElementById("filters_form");
+    filters_form?.classList.contains("hidden") ? filters_form?.classList.remove("hidden") : filters_form?.classList.add("hidden")
+  }
+
+  handleMultipleFilters(value:string, sectionId:string, event: any){
+    event.checked ? this.activatedFilter.push({sectionId, value}) :
+    this.activatedFilter.splice(this.activatedFilter.indexOf({sectionId, value}), 1)  
+  }
 
 
   }

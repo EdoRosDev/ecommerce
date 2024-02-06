@@ -22,12 +22,12 @@
         <section class="pt-6">
             <div class="grid grid-cols-1 gap-8 gap-y-10 lg:grid-cols-4">
                 <div>
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between" (click)="showFilters()">
                         <p class="text-lg">Filters</p>
                         <mat-icon>filter_list</mat-icon>
                     </div>
 
-                    <form action="" class="hidden lg:block">
+                    <form id="filters_form" action="" class="hidden lg:block">
                         <div *ngFor="let filter of filterData let last = last">
                             <div class="py-6">
                                 <span class="font-medium">{{filter.name}}</span>
@@ -37,7 +37,7 @@
                                         <div *ngFor="let option of filter.options">
                                             <div class="flex items-center">
                                                 <mat-checkbox class="filter -'+ option.value' example-margin"
-                                                    [name]="option.id" [value]="option.value" (change)="setFilter()">
+                                                    [name]="option.label" [value]="option.value" (change)="handleMultipleFilters(option.value, filter.id, $event)">
                                                     <span class="text-sm text-gray-500">{{option.label}}</span>
                                                 </mat-checkbox>
                                             </div>
@@ -58,11 +58,11 @@
                 <div class="lg:col-span-3">
                     <div class="flex flex-wrap justify-evenly">
 
-                        <div *ngFor="let item of menShirt">
+                        <ng-container *ngFor="let item of menShirt">
 
                             <product-card [product]="item"></product-card>
 
-                        </div>
+                        </ng-container>
 
                     </div>
                 </div>

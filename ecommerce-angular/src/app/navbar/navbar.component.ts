@@ -4,11 +4,12 @@ import {MatButtonModule} from '@angular/material/button'
 import {MatMenuModule} from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
 import { NavContentComponent } from './nav-content/nav-content.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'navbar',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatMenuModule, CommonModule, NavContentComponent],
+  imports: [MatIconModule, MatButtonModule, MatMenuModule, CommonModule, NavContentComponent, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

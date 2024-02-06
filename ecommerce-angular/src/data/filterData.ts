@@ -25,7 +25,7 @@ export const filters = [
     },
     {
         id: "size",
-        Name: "Size",
+        name: "Size",
         options: [
             {value: "xs", label: "XS"},
             {value: "s", label: "S"},

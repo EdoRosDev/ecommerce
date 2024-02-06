@@ -1,5 +1,6 @@
 export const menHat = [
     {
+        "id": 1,
         "imageUrl": "https://menshaircuts.com/wp-content/uploads/2022/06/mens-hats-fedora-683x1024.jpg",
         "brand": "Fedora",
         "title": "hat1",
@@ -8,6 +9,7 @@ export const menHat = [
         "size": ["M"]
     },
     {
+        "id": 2,
         "imageUrl": "https://www.lockhatters.com/cdn/shop/files/SLOANE-DARK-BROWN-FEDORA-LIFESTYLE-SHOT-1_1515x.jpg?v=1698402728",
         "brand": "Fedora",
         "title": "hat2",
@@ -16,6 +18,7 @@ export const menHat = [
         "size": ["M", "L"]
     },
     {
+        "id": 3,
         "imageUrl": "https://americanhatmakers.com/cdn/shop/products/ElDorado-Unbanded-Brown-Leather-TopHat-AmericanHatMakers-Men-STUD.jpg?v=1690493538&width=1000",
         "brand": "Cilinder",
         "title": "hat3",
@@ -24,6 +27,7 @@ export const menHat = [
         "size": ["S", "L"]
     },
     {
+        "id": 4,
         "imageUrl": "https://cdn.shoplightspeed.com/shops/628390/files/51645213/image.jpg",
         "brand": "Fedora",
         "title": "hat4",
@@ -32,6 +36,7 @@ export const menHat = [
         "size": ["S","M"]
     },
     {
+        "id": 5,
         "imageUrl": "https://i.ebayimg.com/images/g/JrwAAOSw8DVhnfgs/s-l1600.jpg",
         "brand": "Winter",
         "title": "hat5",
