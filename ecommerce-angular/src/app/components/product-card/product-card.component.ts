@@ -9,12 +9,9 @@ import { RouterModule } from '@angular/router';
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
 })
-export class ProductCardComponent implements OnInit {
+export class ProductCardComponent {
   @Input() product!: Product;
-  
-  ngOnInit(): void {
-    console.log(this.product)
-  }
+
 
   
 }

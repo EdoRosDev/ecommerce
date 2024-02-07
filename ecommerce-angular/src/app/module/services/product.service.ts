@@ -9,8 +9,7 @@ export class ProductService {
   allProduct: any[];
 
   constructor() { 
-    this.allProduct = //menHat.concat(menJeans).concat(
-      menShirt.concat(womenHat).concat(womenShirt).concat(womenJeans)
+    this.allProduct = menHat.concat(menJeans).concat(menShirt).concat(womenHat).concat(womenShirt).concat(womenJeans)
   }
 
   getProductById(id: number): Product {

@@ -5,11 +5,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CartComponent } from './components/cart/cart.component';
 
 export const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "products", component: ProductsComponent},
   {path: "product-detail/:id", component: ProductDetailComponent},
+  {path: "cart", component: CartComponent},
   {path: "**", redirectTo: "home", pathMatch: "full"},
 ];
 

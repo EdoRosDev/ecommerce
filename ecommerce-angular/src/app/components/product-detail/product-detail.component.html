@@ -23,11 +23,11 @@
             <div>
                 <p class="text-lg font-semibold">Sizes:</p>
                 <mat-radio-group class="space-x-5" aria-label="Select a size" [(ngModel)]="selectedSize">
-                    <mat-radio-button *ngFor="let size of product.size" value="size"><span>{{size}}</span></mat-radio-button>
+                    <mat-radio-button *ngFor="let size of product.size" [value]="size"><span>{{size}}</span></mat-radio-button>
                 </mat-radio-group>
 
                 <div>
-                    <button color="accent" style="padding: 1.5rem;" mat-raised-button (click)="addToCart()">Add to cart</button>
+                    <button color="accent" style="padding: 1.5rem;" mat-raised-button (click)="addToCart()" [disabled]="!selectedSize">Add to cart</button>
                 </div>
             </div>
         </div>
