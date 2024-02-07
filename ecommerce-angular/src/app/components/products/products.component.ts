@@ -5,8 +5,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider'
 import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox'
-import { filters, menShirt } from '../../../data';
+import { filters } from '../../../data';
 import { ProductCardComponent } from '../product-card/product-card.component';
+import { ProductService } from '../../module/services/product.service';
 
 @Component({
   selector: 'products',
@@ -18,17 +19,19 @@ import { ProductCardComponent } from '../product-card/product-card.component';
 export class ProductsComponent implements OnInit {
   filterData: any
   sortMenu:any = ''
-  menShirt: any;
+  listOfProducts!: any[]
   showFilter: boolean = false
   activatedFilter: {
     sectionId: string
     value: string
   }[] = []
 
+  constructor(productService: ProductService){
+    this.listOfProducts = productService.getAllProducts();
+  }
 
   ngOnInit(){
     this.filterData = filters
-    this.menShirt = menShirt
   }
 
   showFilters(){
