@@ -1,0 +1,20 @@
+<mat-dialog-content>
+    <div class="mt-10">
+
+        <ng-container *ngIf="step==1">
+            <h1 class="py-10 text-center text-3xl font-semibold">ADD SHIPPING ADDRESS</h1>
+            <address-form (deliverConfirm)="nextStep($event)"></address-form>
+        </ng-container>
+
+        <!-- <mat-dialog-actions>s
+            <button mat-button>No Thanks</button>
+            <button mat-button cdkFocusInitial>Ok</button>
+        </mat-dialog-actions> -->
+
+        <ng-container *ngIf="step==2">
+            <h1 class="py-10 text-center text-3xl font-semibold">CONFIRM</h1>
+            <complete-purchase [addressChosen]="addressChosen" [totalPrice]="totalPrice"></complete-purchase>
+        </ng-container>
+
+    </div>
+</mat-dialog-content>
