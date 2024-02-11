@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDivider } from '@angular/material/divider';
 import { MatIcon } from '@angular/material/icon';
-import { Address } from '../../../../../module/address/address';
 import { MatButton } from '@angular/material/button';
 import { MatDialogClose } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
+import { Address } from '../../../../module/address/address';
 
 @Component({
   selector: 'complete-purchase',
