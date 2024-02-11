@@ -1,0 +1,15 @@
+<div>
+    <mat-icon>keyboard_backspace</mat-icon>
+</div>
+
+
+<div>
+    <p>SUMMARY</p>
+    <mat-divider></mat-divider>
+    <p>Total price: {{totalPrice}}</p>
+    <mat-divider></mat-divider>
+    <p>Deliver to:</p>
+    <p *ngFor="let item of itemsOfAddress">{{item}}</p>
+    <mat-divider></mat-divider>
+    <button mat-raised-button [mat-dialog-close]="true" (click)="confirm()">CONFIRM</button>
+</div>

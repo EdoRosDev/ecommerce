@@ -21,7 +21,6 @@ export class CartItemComponent implements OnInit {
     this.cart = cartService
   }
   ngOnInit(): void {
-    console.log(this.item)
     this.quantity = this.item.quantity
     if(this.quantity == 1) this.disableMinusButton = true
   }
