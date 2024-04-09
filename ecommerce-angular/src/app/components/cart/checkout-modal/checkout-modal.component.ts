@@ -39,7 +39,7 @@ export class CheckoutModalComponent {
   @Input() totalPrice: number = 0;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any){
-    this.step = 1
+    this.step = 2
     this.totalPrice = data.totalPrice
   }
 
