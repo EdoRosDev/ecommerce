@@ -36,5 +36,8 @@ export class CompletePurchaseComponent implements OnInit {
     this.confirmAll.emit(true)
   }
   
+  cancel(){
+    this.confirmAll.emit(false)
+  }
 
 }

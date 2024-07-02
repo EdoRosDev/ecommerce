@@ -6,10 +6,6 @@
             <div class="flex space-x-4">
                 <a routerLink="/" class="text-gray-800">Shop with Edo</a>
                 <div>
-                    <button class="open-button" (click)="openNavbarContent('men')" mat-button>Men</button>
-                    <button class="open-button" (click)="openNavbarContent('women')" mat-button>Women</button>
-                </div>
-                <div>
                     <a mat-stroked-button routerLink="products">See products</a>
                 </div>
             </div>
@@ -35,8 +31,6 @@
                         <img class="h-10 w-10" src="https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_1280.png" alt="">
                     </button>
                     <mat-menu #profileMenu="matMenu">
-                        <button mat-menu-item>Orders</button>
-                        <button mat-menu-item>Profile</button>
                         <button (click)="logout()" mat-menu-item>Logout</button>
                     </mat-menu>
                 </div>
@@ -46,9 +40,9 @@
 
     </div>
 
-    <div class="modal-container" *ngIf="isNavbarContentOpen">
+    <!-- <div class="modal-container" *ngIf="isNavbarContentOpen">
 
         <nav-content [selectedSection]="currentSection"></nav-content>
 
-    </div>
+    </div> -->
 </div>

@@ -1,9 +1,9 @@
 <div class="dialog">
-    <div class="backspace">
+    <!-- <div class="backspace">
         <mat-icon>keyboard_backspace</mat-icon>
-    </div>
+    </div> -->
     
-        <h1 class="py-10 text-center text-3xl font-semibold">CONFIRM</h1>
+        <h1 class="py-10 text-center text-3xl font-semibold">CONFIRM PURCHASE</h1>
 
 
     <div>
@@ -11,9 +11,9 @@
         <mat-divider></mat-divider>
         <p class="padding-top" >Total price: {{totalPrice}}</p>
         <mat-divider></mat-divider>
-        <p class="padding-top">Deliver to:</p>
-        <p *ngFor="let item of itemsOfAddress">{{item}}</p>
-        <mat-divider></mat-divider>
-        <button class="padding-top" mat-raised-button [mat-dialog-close]="true" (click)="confirm()">CONFIRM</button>
+        <div class="button">
+            <button mat-raised-button [mat-dialog-close]="true" (click)="cancel()">CANCEL</button>
+            <button mat-raised-button [mat-dialog-close]="true" (click)="confirm()">CONFIRM</button>
+        </div>
     </div>
 </div>
