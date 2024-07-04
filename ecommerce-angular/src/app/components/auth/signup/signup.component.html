@@ -1,0 +1,12 @@
+<form #signUpForm="ngForm">
+    <h3>Sign up here</h3>
+
+    <label for="username">Username</label>
+    <input type="text" name="username" ngModel required placeholder="Email or Phone" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" ngModel required placeholder="Password" id="password">
+    <div class="signUp">
+        <button mat-raised-button color="accent" (click)="register(signUpForm)">Register</button>
+    </div>
+</form>

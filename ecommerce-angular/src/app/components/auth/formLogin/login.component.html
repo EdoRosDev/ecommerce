@@ -1,0 +1,16 @@
+<form #loginForm="ngForm">
+    <h3>Login here</h3>
+
+    <label for="username">Username</label>
+    <input type="text" name="username" ngModel required placeholder="Email or Phone" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" ngModel required placeholder="Password" id="password">
+
+    <button class="login" mat-raised-button color="accent" (click)="login(loginForm)">LOGIN</button>
+    <div class="signUp">
+      <p>Don't have an account yet? Sign up here</p>
+      <button mat-raised-button color="accent" (click)="signUp()">Sign UP</button>
+    </div>
+
+</form>
