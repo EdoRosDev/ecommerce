@@ -8,8 +8,9 @@ import com.ecommerce.service.ServiceDTO.ServiceDTO;
 
 public abstract class AbstractService<Entity, DTO> implements ServiceDTO<DTO> {
 
-    @Autowired
+  @Autowired
 	protected CrudRepository<Entity,Long> repository;
+	@Autowired
 	protected Converter<Entity,DTO> converter;
 
     @Override
