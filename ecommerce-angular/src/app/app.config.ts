@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CartComponent } from './components/cart/cart.component';
+import { provideHttpClient } from '@angular/common/http';
 
 export const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -16,5 +17,5 @@ export const routes: Routes = [
 ];
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes, withComponentInputBinding()), provideAnimations(), provideAnimations(), importProvidersFrom(MatNativeDateModule)]
+  providers: [provideRouter(routes, withComponentInputBinding()), provideAnimations(), provideAnimations(), importProvidersFrom(MatNativeDateModule), provideHttpClient()]
 };

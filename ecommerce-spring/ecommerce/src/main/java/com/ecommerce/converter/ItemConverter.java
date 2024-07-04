@@ -4,7 +4,7 @@ import com.ecommerce.converter.abstractConverter.AbstractConverter;
 import com.ecommerce.dto.ItemDTO;
 import com.ecommerce.model.Item;
 
-public class ItemConverter  extends AbstractConverter<Item, ItemDTO> {
+public class ItemConverter extends AbstractConverter<Item, ItemDTO> {
 
     @Override
     public Item toEntity(ItemDTO dto) {

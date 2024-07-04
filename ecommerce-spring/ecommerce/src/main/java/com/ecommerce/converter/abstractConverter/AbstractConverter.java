@@ -3,7 +3,7 @@ package com.ecommerce.converter.abstractConverter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ecommerce.converter.ConverterInterface.Converter;
+import com.ecommerce.converter.converterInterface.Converter;
 
 public abstract class AbstractConverter<Entity, DTO> implements Converter<Entity, DTO> {
 

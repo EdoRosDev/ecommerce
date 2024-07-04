@@ -3,14 +3,13 @@ package com.ecommerce.service.abstractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 
-import com.ecommerce.converter.ConverterInterface.Converter;
+import com.ecommerce.converter.converterInterface.Converter;
 import com.ecommerce.service.ServiceDTO.ServiceDTO;
 
 public abstract class AbstractService<Entity, DTO> implements ServiceDTO<DTO> {
 
     @Autowired
 	protected CrudRepository<Entity,Long> repository;
-	@Autowired
 	protected Converter<Entity,DTO> converter;
 
     @Override

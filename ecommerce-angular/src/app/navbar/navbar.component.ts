@@ -5,6 +5,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
 import { NavContentComponent } from './nav-content/nav-content.component';
 import { RouterModule } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogLoginComponent } from '../components/auth/dialog/dialog.component';
+import { AuthService } from '../services/auth/auth.service';
 
 @Component({
   selector: 'navbar',
@@ -14,20 +17,26 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  logged: boolean = false;
   isNavbarContentOpen: boolean = false;
   currentSection: string = ''
 
+  constructor(public dialog: MatDialog, private authService: AuthService){
+
+  }
+
   login(){
-    this.logged = true
+    this.dialog.open(DialogLoginComponent, {
+      hasBackdrop: true,
+      autoFocus: true,
+    });
   }
 
   logout(){
-    this.logged = false
+    this.authService.logout()
   }
 
   isLogged(){
-    return this.logged
+   return this.authService.isLogged()
   }
 
   openNavbarContent(section: string){
