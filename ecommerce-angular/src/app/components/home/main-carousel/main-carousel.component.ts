@@ -14,17 +14,18 @@ import { OnInit } from '@angular/core';
 })
 export class MainCarouselComponent implements OnInit {
 
-  carouselData: {image: string, path:string}[];
+  carouselData: {image: string}[];
   currentSlide: number;
   interval: number = 1000
   slider: any;
-  slides: {id: number, src: string, path: string}[] = []
+  slides: {id: number, src: string}[] = []
   
   constructor(){
     this.carouselData = homeCarouselData
     this.currentSlide = 0;
+    console.log(homeCarouselData.length)
     for (let i = 0; i < homeCarouselData.length; i++) {
-      this.slides.push({id: i, src: homeCarouselData[i].image, path: homeCarouselData[i].path})
+      this.slides.push({id: i, src: homeCarouselData[i].image})
     }
     this.carouselData = homeCarouselData
     this.currentSlide = 0;
