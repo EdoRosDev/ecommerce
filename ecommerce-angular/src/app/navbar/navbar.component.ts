@@ -18,10 +18,11 @@ import { AuthService } from '../services/auth/auth.service';
 })
 export class NavbarComponent {
   isNavbarContentOpen: boolean = false;
-  currentSection: string = ''
+  currentSection: string = '';
+  username: string = '';
 
   constructor(public dialog: MatDialog, private authService: AuthService){
-
+    this.username = this.authService.user?.getUsername() || ''
   }
 
   login(){
@@ -29,6 +30,7 @@ export class NavbarComponent {
       hasBackdrop: true,
       autoFocus: true,
     });
+    
   }
 
   logout(){
@@ -36,7 +38,9 @@ export class NavbarComponent {
   }
 
   isLogged(){
-   return this.authService.isLogged()
+    let bool = this.authService.isLogged()
+    if(bool) this.username = this.authService.user!.getUsername()
+   return bool
   }
 
   openNavbarContent(section: string){

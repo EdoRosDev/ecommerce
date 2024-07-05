@@ -22,12 +22,13 @@ export class LoginComponent {
   }
 
   login(loginForm: NgForm){
-    const login = this.authService.login(loginForm.value)
-    if(login){
-      this.onFlowChange.emit({flow: 'result', data: "You logged successfully"})
-    } else {
-      this.onFlowChange.emit({flow: 'result', data: "Your login process encountered some error, try again please"})
-    }
+    this.authService.login(loginForm.value, (isLoginSuccess: boolean) => {
+      if(isLoginSuccess){
+        this.onFlowChange.emit({flow: 'result', data: "You logged successfully"})
+      } else {
+        this.onFlowChange.emit({flow: 'result', data: "Your login process encountered some error, try again please"})
+      }
+    })
   }
 
   signUp(){
