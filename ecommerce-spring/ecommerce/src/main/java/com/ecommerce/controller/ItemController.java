@@ -36,4 +36,10 @@ public class ItemController extends AbstractController<ItemDTO>{
         return itemDTOs;
     }
 
+    @GetMapping(value = "/sizesandcolors")
+    public List<ItemDTO> findBySizesAndColors(@RequestParam Size[] sizes, Color[] colors) {
+        List<ItemDTO> itemDTOs = ((ItemService) service).findBySizesAndColors(sizes, colors);
+        return itemDTOs;
+    }
+
 }

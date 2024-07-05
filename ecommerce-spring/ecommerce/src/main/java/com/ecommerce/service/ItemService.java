@@ -23,5 +23,9 @@ public class ItemService extends AbstractService<Item, ItemDTO> {
     public List<ItemDTO> findByColors(Color[] colors) {
         return converter.toDTOList(((ItemRepository) repository).findByColors(colors));
     }
+    public List<ItemDTO> findBySizesAndColors(Size[] sizes, Color[] colors) {
+        return converter.toDTOList(((ItemRepository) repository).findBySizesAndColors(sizes, colors));
+    }
+    
 
 }

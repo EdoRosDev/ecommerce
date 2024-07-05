@@ -18,4 +18,7 @@ public interface ItemRepository extends CrudRepository<Item, Long>{
     List<Item> findBySizes(Size[] sizes);
 
     List<Item> findByColors(Color[] colors);
+
+    List<Item> findBySizesAndColors(Size[] sizes, Color[] colors);
+
 }
