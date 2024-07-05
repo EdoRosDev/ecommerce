@@ -27,11 +27,11 @@ export const filters = [
         id: "size",
         name: "Size",
         options: [
-            {value: "xs", label: "XS"},
-            {value: "s", label: "S"},
-            {value: "m", label: "M"},
-            {value: "l", label: "L"},
-            {value: "xl", label: "XL"}
+            {value: "XS", label: "XS"},
+            {value: "S", label: "S"},
+            {value: "M", label: "M"},
+            {value: "L", label: "L"},
+            {value: "XL", label: "XL"}
         ]
     }
 ]

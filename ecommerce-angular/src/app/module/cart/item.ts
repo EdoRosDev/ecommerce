@@ -1,22 +1,22 @@
 import { Product } from "../product/product";
 
-export class Item implements Omit<Product, 'size'>   {
+
+export class Item implements Omit<Product, 'size' |'color'>   {
     id: number;
-    imageUrl: string;
+    img: string;
     brand: string;
     title: string;
-    color: string;
+    selectedColor: string;
     price: number;
-    
-    selectedSize: string
+    selectedSize: string;
     quantity: number;
 
-    constructor(p:Product, size: string){
+    constructor(p:Product, size: string, color: string){
         this.id=p.id
-        this.imageUrl = p.imageUrl
+        this.img = p.img
         this.brand = p.brand
         this.title = p.title
-        this.color = p.color
+        this.selectedColor = color
         this.price = p.price
         this.selectedSize = size
         this.quantity = 1

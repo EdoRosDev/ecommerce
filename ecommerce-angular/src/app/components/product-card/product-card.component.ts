@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from '../../module/product/product';
+// import { Product } from '../../module/product/product';
 import { RouterModule } from '@angular/router';
+import { ItemDTO } from '../../dto/itemDTO';
 
 @Component({
   selector: 'product-card',
@@ -10,7 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './product-card.component.scss'
 })
 export class ProductCardComponent {
-  @Input() product!: Product;
+  @Input() product!: ItemDTO;
 
 
   

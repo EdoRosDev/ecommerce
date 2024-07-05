@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatButton, MatMiniFabButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { Item } from '../../../module/cart/item';
-import { CartService } from '../../../module/services/cart.service';
+import { CartService } from '../../../services/cart/cart.service';
 
 @Component({
   selector: 'cart-item',
@@ -14,10 +14,10 @@ import { CartService } from '../../../module/services/cart.service';
 export class CartItemComponent implements OnInit {
   @Input() item!: Item
   disableMinusButton: boolean = false;
-  quantity: number = 0
+  quantity: number = 0;
   cart: CartService;
 
-  constructor(cartService: CartService){
+  constructor(private cartService: CartService){
     this.cart = cartService
   }
   ngOnInit(): void {

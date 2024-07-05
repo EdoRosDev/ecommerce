@@ -1,5 +1,3 @@
-import { Product } from "../product/product";
-
 // export class Cart{
 
 //     cartItems: Item[] = []

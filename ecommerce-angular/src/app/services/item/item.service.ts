@@ -31,4 +31,22 @@ export class ItemService {
     })
   }
 
+  selectBySizesAndColors(size: string[], color: string[]): Observable<Iterable<ItemDTO>>{
+    let sizes: string = '', colors: string =''
+    size.forEach((size: string) => {
+      sizes += size + ',';
+    });
+    color.forEach((color: string) => {
+      colors += color + ',';
+    });
+    sizes = sizes.slice(0, sizes.length-1)
+    colors = colors.slice(0, colors.length-1)
+    const res = this.http.get<any>('http://localhost:8080/item/sizesandcolors?sizes=' + sizes + '&colors=' + colors )
+    return res
+  }
+
+  getProductById(productId: number): Observable<ItemDTO>{
+    return this.http.get<ItemDTO>('http://localhost:8080/item/read?id='+ productId)
+  }
+
 }

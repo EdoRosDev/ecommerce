@@ -23,7 +23,6 @@ export class MainCarouselComponent implements OnInit {
   constructor(){
     this.carouselData = homeCarouselData
     this.currentSlide = 0;
-    console.log(homeCarouselData.length)
     for (let i = 0; i < homeCarouselData.length; i++) {
       this.slides.push({id: i, src: homeCarouselData[i].image})
     }

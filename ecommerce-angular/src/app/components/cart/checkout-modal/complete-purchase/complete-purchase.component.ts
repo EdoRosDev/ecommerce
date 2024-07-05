@@ -14,30 +14,21 @@ import { Address } from '../../../../module/address/address';
   styleUrl: './complete-purchase.component.scss'
 })
 export class CompletePurchaseComponent implements OnInit {
-  @Output() confirmAll = new EventEmitter<boolean>();
+  @Output() confirmAll = new EventEmitter<string>();
   @Input() totalPrice: number = 0;
-  @Input() addressChosen: Address = {
-    city: '',
-    firstName: '',
-    lastName: '',
-    mobile: '',
-    state: '',
-    streetAddress: '',
-    zipCode: ''
-  }
   
   itemsOfAddress : any
   
   ngOnInit() : void{
-    this.itemsOfAddress = Object.values(this.addressChosen)
+
   }
 
   confirm(){
-    this.confirmAll.emit(true)
+    this.confirmAll.emit("success")
   }
   
   cancel(){
-    this.confirmAll.emit(false)
+    this.confirmAll.emit("cancel")
   }
 
 }

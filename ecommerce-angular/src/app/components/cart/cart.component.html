@@ -25,11 +25,13 @@
                     <div class="space-y-3">
                         <div class="flex justify-between pt-3">
                             <span>Total Price</span>
-                            <span>100mila</span>
+                            <span>{{getTotalPrice()}}</span>
                         </div>
                     </div>
 
-                    <button mat-raised-button style="padding: 1.5rem;" class="text-lg mt-8 p-28 px-10 w-full"
+                    <button *ngIf="!authService.isLogged()" mat-raised-button style="padding: 1.5rem;" class="text-lg mt-8 p-28 px-10 w-full"
+                    color="accent" [disabled]="!authService.isLogged()">Login first!</button>
+                    <button *ngIf="authService.isLogged()" mat-raised-button style="padding: 1.5rem;" class="text-lg mt-8 p-28 px-10 w-full"
                     color="accent" (click)="goToCheckOut()">CHECKOUT</button>
                 </div>
 
@@ -37,4 +39,5 @@
         </section>
 
     </div>
+
 </main>

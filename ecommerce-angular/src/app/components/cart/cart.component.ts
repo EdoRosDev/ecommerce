@@ -3,67 +3,65 @@ import { CartItemComponent } from './cart-item/cart-item.component';
 import { CommonModule } from '@angular/common';
 import { MatDivider } from '@angular/material/divider';
 import { MatButton } from '@angular/material/button';
-import { CartService } from '../../module/services/cart.service';
+import { CartService } from '../../services/cart/cart.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CheckoutModalComponent } from './checkout-modal/checkout-modal.component';
 import {
   MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
-  MatDialogActions,
   MatDialogClose,
+  MatDialogContent,
+  MatDialogTitle,
 } from '@angular/material/dialog';
+import { ResultComponent } from './result/result.component';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'cart',
   standalone: true,
-  imports: [CartItemComponent, CommonModule, MatDivider, MatButton, CheckoutModalComponent,
-  MatDialogTitle,
+  imports: [CartItemComponent, CommonModule, MatDivider, MatButton, ResultComponent,
+   CheckoutModalComponent, MatDialogTitle, MatDialogContent, MatDialogClose
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
 export class CartComponent {
-
-  cart: CartService
   modalService: NgbModal
-
-  constructor(cartService: CartService, ngbModal: NgbModal, public dialog: MatDialog){
+  cart: CartService
+  result: string = '';
+  constructor(private cartService: CartService, public authService: AuthService, ngbModal: NgbModal, public dialog: MatDialog){
     this.cart = cartService
     this.modalService = ngbModal
   }
 
   goToCheckOut() {
-    // const modalIstance = this.modalService.open(CheckoutModalComponent, {
-    //   backdrop: true, 
-    //   // fullscreen: 'xxl',
-    //   // centered: true,
-    //   // size: 'lg' 
-    // });
-    // modalIstance.componentInstance.items = {
-    //   checkOut: () => {
-    //     this.checkOut();
-    //     modalIstance.close();
-    //   }
-    // }
-
     const dialogRef = this.dialog.open(CheckoutModalComponent, {
       hasBackdrop: true,
       autoFocus: true,
       data:{
-        totalPrice: this.cart.getTotalPrice(),
+        totalPrice: this.cartService.getTotalPrice(),
+        onClosing: ((data: any) => {this.result = data})
       },
+      
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if(result) this.checkOut()
+    dialogRef.afterClosed().subscribe(() => {
+      this.checkOut()
     });
   }
 
+  getTotalPrice(){
+   return this.cart.getTotalPrice()
+  }
+
   checkOut(){
-    console.log("Payment successfully made!")
+    if(this.result == "cancel") return;
+      this.dialog.open(ResultComponent, {
+      hasBackdrop: true,
+      autoFocus: true,
+      data:{
+        text: this.result == "success" ? "Payment successfully made!" : "Something went wrong, try again"
+      },
+    });
   }
 
 }

@@ -17,7 +17,6 @@ export class DialogLoginComponent {
 
   constructor(){
     this.flow = 'login'
-    console.log("prova", this.flow == 'login')
   }
 
   changeFlow(event: {flow: string, data?: string}){

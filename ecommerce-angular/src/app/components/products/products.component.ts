@@ -7,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox'
 import { filters } from '../../../data';
 import { ProductCardComponent } from '../product-card/product-card.component';
-import { ProductService } from '../../module/services/product.service';
+import { ItemService } from '../../services/item/item.service';
 
 @Component({
   selector: 'products',
@@ -19,15 +19,15 @@ import { ProductService } from '../../module/services/product.service';
 export class ProductsComponent implements OnInit {
   filterData: any
   sortMenu:any = ''
-  listOfProducts!: any[]
+  products: any
   showFilter: boolean = false
-  activatedFilter: {
-    sectionId: string
-    value: string
-  }[] = []
+  activatedFilterColor:string[] = []
+  activatedFilterSize:string[] = []
 
-  constructor(productService: ProductService){
-    this.listOfProducts = productService.getAllProducts();
+  constructor(private itemService: ItemService){
+    this.itemService.productsChange.subscribe(data => {
+      this.products = data
+    })
   }
 
   ngOnInit(){
@@ -40,8 +40,17 @@ export class ProductsComponent implements OnInit {
   }
 
   handleMultipleFilters(value:string, sectionId:string, event: any){
-    event.checked ? this.activatedFilter.push({sectionId, value}) :
-    this.activatedFilter.splice(this.activatedFilter.indexOf({sectionId, value}), 1)  
+    if(sectionId == 'color'){
+      event.checked ? this.activatedFilterColor.push(value.toLowerCase()) :
+      this.activatedFilterColor.splice(this.activatedFilterColor.indexOf(value, 1))
+    } else {
+      event.checked ? this.activatedFilterSize.push(value.toUpperCase()) :
+      this.activatedFilterSize.splice(this.activatedFilterSize.indexOf(value, 1))
+    }
+    this.itemService.selectBySizesAndColors(this.activatedFilterSize, this.activatedFilterColor).subscribe(data => {
+      this.products = data
+    });
+    
   }
 
 

@@ -23,23 +23,16 @@ import { CompletePurchaseComponent } from './complete-purchase/complete-purchase
 })
 export class CheckoutModalComponent {
 
-  addressChosen: Address = {
-    city: '',
-    firstName: '',
-    lastName: '',
-    mobile: '',
-    state: '',
-    streetAddress: '',
-    zipCode: ''
-  }
   @Input() totalPrice: number = 0;
+
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any){
     this.totalPrice = data.totalPrice
+
   }
 
-  nextStep(event: any){
-    this.addressChosen = event
+  complete(event: string){
+    this.data.onClosing(event)
   }
 
 }

@@ -1,37 +1,44 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { Product } from '../../module/product/product';
+import { Component, Input } from '@angular/core';
 import {MatRadioModule} from '@angular/material/radio';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-import { ProductService } from '../../module/services/product.service';
-import { CartService } from '../../module/services/cart.service';
+// import { CartService } from '../../services/cart/cart.service';
+import { ItemService } from '../../services/item/item.service';
+import { ItemDTO } from '../../dto/itemDTO';
+import { CartService } from '../../services/cart/cart.service';
+import { Product } from '../../module/product/product';
+import { MatDivider } from '@angular/material/divider';
 
 @Component({
   selector: 'product-detail',
   standalone: true,
-  imports: [MatRadioModule, CommonModule, MatButtonModule,FormsModule],
+  imports: [MatRadioModule, MatDivider, CommonModule, MatButtonModule, FormsModule, CommonModule],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.scss'
 })
 export class ProductDetailComponent {
-  productService: ProductService;
-  cart: CartService
   product!: Product;
+  item!: ItemDTO;
 
   @Input('id')
-  set productId(productId: number) {
-    this.product = this.productService.getProductById(productId);
+  set itemId(productId: number) {
+    this.itemService.getProductById(productId).subscribe(data => { 
+      this.item = data
+    });
   }
   selectedSize: string = ''
+  selectedColor: string = ''
 
-  constructor(productService: ProductService, cartService: CartService){
-    this.productService = productService
-    this.cart = cartService
+  constructor(private itemService: ItemService, private cartService: CartService
+  ){
+
   }
 
   addToCart(){
-    if(this.selectedSize) this.cart.addToCart(this.product, this.selectedSize)
+    this.product = {...this.item, size:this.selectedSize, color: this.selectedColor }
+    if(this.selectedSize && this.selectedColor)
+       this.cartService.addToCart(this.product, this.selectedSize, this.selectedColor)
   }
 
 }

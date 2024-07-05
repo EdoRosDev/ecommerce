@@ -2,12 +2,12 @@
     <div class="flex items-center">
         
         <div class="w-[5rem] h-[5rem] lg:w-[9rem] lg:h-[9rem]">
-            <img class="w-full h-full object-cover object-top" [src]="item.imageUrl" alt="">
+            <img class="w-full h-full object-cover object-top" [src]="item.img" alt="">
         </div>
         <div class="ml-5 space-y-1">
             <p>{{item.title}}</p>
             <p class="text-gray-500">{{item.selectedSize}}</p>
-            <p class="text-gray-500">PRICE</p>
+            <p class="text-gray-500">{{item.price}}</p>
         </div>
 
     </div>
