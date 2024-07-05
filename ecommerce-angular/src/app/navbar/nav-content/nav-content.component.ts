@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { navigation } from '../../../data';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -16,7 +15,6 @@ export class NavContentComponent implements OnInit {
   @Input() selectedSection: any;
   
   ngOnInit(): void {
-    this.category = navigation
   }
 
 }

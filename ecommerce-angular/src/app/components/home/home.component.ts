@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { ProductSliderComponent } from './product-slider/product-slider.component';
-import { menJeans, menShirt, menHat, womenJeans, womenShirt, womenHat } from '../../../data';
 import { ItemService } from '../../services/item/item.service';
 import { CommonModule } from '@angular/common';
 
