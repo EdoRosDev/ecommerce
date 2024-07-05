@@ -6,6 +6,7 @@ export const colorFilter = [
     "Brown",
     "Green",
     "Blue",
+    "Pink"
 ]
 
 
@@ -20,7 +21,8 @@ export const filters = [
             {value: "yellow", label: "Yellow"},
             {value: "brown", label: "Brown"},
             {value: "green", label: "Green"},
-            {value: "blue", label: "Blue"}
+            {value: "blue", label: "Blue"},
+            {value: "pink", label: "Pink"}
         ]
     },
     {

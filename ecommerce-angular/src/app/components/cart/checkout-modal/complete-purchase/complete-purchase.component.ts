@@ -4,7 +4,6 @@ import { MatIcon } from '@angular/material/icon';
 import { MatButton } from '@angular/material/button';
 import { MatDialogClose } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
-import { Address } from '../../../../module/address/address';
 
 @Component({
   selector: 'complete-purchase',
@@ -16,8 +15,6 @@ import { Address } from '../../../../module/address/address';
 export class CompletePurchaseComponent implements OnInit {
   @Output() confirmAll = new EventEmitter<string>();
   @Input() totalPrice: number = 0;
-  
-  itemsOfAddress : any
   
   ngOnInit() : void{
 

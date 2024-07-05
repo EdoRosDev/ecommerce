@@ -2,7 +2,6 @@ import { Component, Inject, Input, inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogActions, MatDialogClose, MatDialogContent } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { MatButton, MatButtonModule } from '@angular/material/button';
-import { Address } from '../../../module/address/address';
 import { CompletePurchaseComponent } from './complete-purchase/complete-purchase.component';
 
 
