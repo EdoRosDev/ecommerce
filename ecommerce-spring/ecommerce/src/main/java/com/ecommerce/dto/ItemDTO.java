@@ -17,6 +17,14 @@ public class ItemDTO {
 
     private Long id;
 
+    private String img;
+
+    private String title;
+
+    private String brand;
+
+    private Float price;
+
     private Size[] sizes;
 
     private Color[] colors;

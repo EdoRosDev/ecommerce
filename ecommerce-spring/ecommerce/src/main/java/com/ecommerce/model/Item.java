@@ -23,6 +23,18 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "img")
+    private String img;
+
+    @Column(name = "title")
+    private String title;
+
+    @Column(name = "brand")
+    private String brand;
+
+    @Column(name = "price")
+    private Float price;
+
     @Column(name = "size")
     private Size[] sizes;
 
@@ -31,6 +43,10 @@ public class Item {
 
     public Long getId(){
         return this.id;
+    }
+
+    public String getImg(){
+        return this.img;
     }
 
     public Size[] getSizes(){

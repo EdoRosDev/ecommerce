@@ -2,13 +2,8 @@
 
     <main-carousel></main-carousel>
     
-    <div>
-        <product-slider title="Men's Jeans" [products]="menJeans"></product-slider>
-        <product-slider title="Women's Jeans" [products]="womenJeans"></product-slider>
-        <product-slider title="Men's shirt" [products]="menShirt"></product-slider>
-        <product-slider title="Women's shirt" [products]="womenShirt"></product-slider>
-        <product-slider title="Men's hat" [products]="menHat"></product-slider>
-        <product-slider title="Women's hat" [products]="womenHat"></product-slider>
+    <div *ngIf="products">
+        <product-slider title="Our product" [products]="products"></product-slider>
     </div>
 
 </div>

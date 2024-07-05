@@ -35,7 +35,7 @@ export class AuthService {
     this.http = http
     this.userChange.subscribe((value) => {
       this.user = value
-  });
+    });
   }
 
   register(data: {username: string, password: string}): boolean{
@@ -50,7 +50,6 @@ export class AuthService {
     const res: Observable<UserDTO> = this.http.post<any>('http://localhost:8080/user/login', logindto)
     res.subscribe((user: UserDTO) => {
       this.userChange.next(new User(user.username))
-      console.log(this.user)
       if(this.user) {
         this.logged = true;
         callback(true)
