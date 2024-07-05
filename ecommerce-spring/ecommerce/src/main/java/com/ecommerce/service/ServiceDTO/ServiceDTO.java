@@ -2,7 +2,7 @@ package com.ecommerce.service.ServiceDTO;
 
 public interface ServiceDTO<DTO> {
 
-    public Iterable<DTO> getAll();
+  public Iterable<DTO> getAll();
 
 	public DTO read(long id);
 	

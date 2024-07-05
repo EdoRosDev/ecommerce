@@ -1,9 +1,11 @@
 package com.ecommerce.converter;
 
+import org.springframework.stereotype.Component;
+
 import com.ecommerce.converter.abstractConverter.AbstractConverter;
 import com.ecommerce.dto.UserDTO;
 import com.ecommerce.model.User;
-
+@Component
 public class UserConverter extends AbstractConverter<User, UserDTO> {
 
     @Override

@@ -13,7 +13,7 @@ public abstract class AbstractService<Entity, DTO> implements ServiceDTO<DTO> {
 	@Autowired
 	protected Converter<Entity,DTO> converter;
 
-    @Override
+	@Override
 	public DTO insert(DTO dto) {
 		return converter.toDTO(repository.save(converter.toEntity(dto)));
 	}
