@@ -1,0 +1,19 @@
+<div class="dialog">
+    <!-- <div class="backspace">
+        <mat-icon>keyboard_backspace</mat-icon>
+    </div> -->
+    
+        <h1 class="py-10 text-center text-3xl font-semibold">CONFIRM PURCHASE</h1>
+
+
+    <div>
+        <p>SUMMARY</p>
+        <mat-divider></mat-divider>
+        <p class="padding-top" >Total price: {{totalPrice}}</p>
+        <mat-divider></mat-divider>
+        <div class="button">
+            <button mat-raised-button [mat-dialog-close]="true" (click)="cancel()">CANCEL</button>
+            <button mat-raised-button [mat-dialog-close]="true" (click)="confirm()">CONFIRM</button>
+        </div>
+    </div>
+</div>

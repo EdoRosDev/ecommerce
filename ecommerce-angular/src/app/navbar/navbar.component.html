@@ -1,0 +1,48 @@
+<div class=" fixed top-0 z-50 right-0 left-0 bg-[#e23b54] text-gray-800">
+
+    <div class="px-5 lg:px-20 h-16 flex items-center justify-between">
+
+        <div class="flex items-center">
+            <div class="flex space-x-4">
+                <a routerLink="/" class="text-gray-800">Shop with Edo</a>
+                <div>
+                    <a mat-stroked-button routerLink="products">See products</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center">
+            <a routerLink="home">
+            <button mat-icon-button>
+                <mat-icon>home</mat-icon>
+            </button>
+            </a>
+            <button mat-icon-button routerLink="cart" >
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+
+            <button *ngIf="!isLogged()" (click)="login()" mat-raised-button color="accent">LOGIN</button>
+
+            <div class="relative ml-3 flex items-center">
+
+                <div *ngIf="isLogged()" class="flex items-center space-x-5">
+                    <span class="font-bold text-lg">{{username}}</span>
+                    <button mat-button [matMenuTriggerFor]="profileMenu">
+                        <img class="h-10 w-10" src="https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_1280.png" alt="">
+                    </button>
+                    <mat-menu #profileMenu="matMenu">
+                        <button (click)="logout()" mat-menu-item>Logout</button>
+                    </mat-menu>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="modal-container" *ngIf="isNavbarContentOpen">
+
+        <nav-content [selectedSection]="currentSection"></nav-content>
+
+    </div> -->
+</div>

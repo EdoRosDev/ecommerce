@@ -1,0 +1,41 @@
+<div class="p-5 lg:p-10 mt-10" *ngIf="item">
+
+    <p class="text-gray-500 py-10">{{item.title}}</p>
+
+    <section class="lg:grid grid-cols-3 lg:gap-10">
+        <div class="col-span-2 flex items-center flex-col">
+
+            <img [src]="item.img" alt="">
+
+        </div>
+
+        <div class="col-span-1 space-y-10 mt-10 lg:mt-0">
+
+            <div class="space-y-2">
+                <p class="font-semibold text-slate-600 text-lg">{{item.brand}}</p>
+                <p class="text-xl">{{item.colors}}</p>
+            </div>
+
+            <div class="flex items-center space-x-5">
+                <p class="text-lg">{{item.price}}</p>
+            </div>
+
+            <div>
+                <p class="text-lg font-semibold">Sizes:</p>
+                <mat-radio-group class="space-x-5" aria-label="Select a size" [(ngModel)]="selectedSize">
+                    <mat-radio-button *ngFor="let size of item.sizes" [value]="size"><span>{{size}}</span></mat-radio-button>
+                </mat-radio-group>
+                <mat-divider></mat-divider>
+                <p class="text-lg font-semibold padding-top">Colors:</p>
+                <mat-radio-group class="space-x-5" aria-label="Select a color" [(ngModel)]="selectedColor">
+                    <mat-radio-button *ngFor="let color of item.colors" [value]="color"><span>{{color}}</span></mat-radio-button>
+                </mat-radio-group>
+
+                <div>
+                    <button color="accent" style="padding: 1.5rem;" mat-raised-button (click)="addToCart()" [disabled]="!selectedSize || !selectedColor">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
