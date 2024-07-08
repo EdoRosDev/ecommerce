@@ -2,7 +2,7 @@
 Code project: ecommerce
 
 
-V. 1.0
+V. 1.1
 
 Front-end
   - Login and Sign up flow
@@ -10,5 +10,5 @@ Front-end
   - Cart 
   
 Back-end
-  - User authentication
+  - User authentication CRUD
   - Products CRUD
