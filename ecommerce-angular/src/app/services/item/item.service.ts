@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ItemDTO } from '../../dto/itemDTO';
+import { ItemDTO } from '../../components/dto/itemDTO';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({

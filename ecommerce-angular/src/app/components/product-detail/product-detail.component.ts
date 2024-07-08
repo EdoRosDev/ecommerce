@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 // import { CartService } from '../../services/cart/cart.service';
 import { ItemService } from '../../services/item/item.service';
-import { ItemDTO } from '../../dto/itemDTO';
+import { ItemDTO } from '../dto/itemDTO';
 import { CartService } from '../../services/cart/cart.service';
 import { Product } from '../../module/product/product';
 import { MatDivider } from '@angular/material/divider';

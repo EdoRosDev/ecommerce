@@ -21,12 +21,15 @@ export class SignupComponent {
 
 
   register(signUpForm: NgForm){
-    const registrationSuccess = this.authService.register(signUpForm.value)
-    if(registrationSuccess){
-      this.success()
-    } else {
-      this.error()
-    }
+    const res = this.authService.register(signUpForm.value)
+    res.subscribe((registrationSuccess) => {
+      console.log(registrationSuccess)
+      if(registrationSuccess){
+        this.success()
+      } else {
+        this.error()
+      }
+    })
   }
 
   success(){
